@@ -12,7 +12,7 @@
 
         <div class="mt-10 grid gap-6 md:grid-cols-3">
             @foreach ($profile->projects as $project)
-                <article class="project-card overflow-hidden rounded-2xl bg-panel/50" data-category="{{ $project->project_category_id }}">
+                   <article class="project-card overflow-hidden rounded-2xl bg-panel/50 transition duration-300 hover:-translate-y-2 hover:shadow-xl hover:shadow-accent/20" data-category="{{ $project->project_category_id }}">
                     @if ($project->thumbnail)
                         <img src="{{ asset('images/' . $project->thumbnail) }}" alt="{{ $project->judul }}" class="h-48 w-full object-cover">
                     @else
@@ -39,7 +39,7 @@
             @endforeach
         </div>
     </div>
-</section>
+<section id="projects" class="reveal border-t border-panel">
 
 @push('scripts')
     <script>

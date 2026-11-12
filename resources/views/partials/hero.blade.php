@@ -9,20 +9,20 @@
 
 <section id="home" class="mx-auto flex min-h-[80vh] max-w-6xl flex-col-reverse items-center justify-between gap-12 px-6 py-20 md:flex-row">
     <div class="text-center md:text-left">
-        <p class="font-semibold text-accent">Hi, I'm {{ $profile->nama }}</p>
-        <h1 class="mt-3 text-5xl font-bold uppercase leading-tight md:text-7xl">
+        <p class="animate-fade-up font-semibold text-accent">Hi, I'm {{ $profile->nama }}</p>
+        <h1 class="animate-fade-up animate-delay-1 mt-3 text-5xl font-bold uppercase leading-tight md:text-7xl">
             {{ implode(' ', $words) }}
             <span class="text-accent">{{ $lastWord }}</span>
         </h1>
-        <div class="mt-8 flex flex-wrap justify-center gap-4 md:justify-start">
-            <a href="#contact" class="rounded-full bg-accent px-7 py-3 text-sm font-semibold">Hire me</a>
+        <div class="animate-fade-up animate-delay-2 mt-8 flex flex-wrap justify-center gap-4 md:justify-start">
+            <a href="#contact" class="rounded-full bg-accent px-7 py-3 text-sm font-semibold transition duration-300 hover:-translate-y-0.5 hover:brightness-110">Hire me</a>
             @if ($profile->cv_file)
-                <a href="{{ asset('files/' . $profile->cv_file) }}" download class="rounded-full bg-panel px-7 py-3 text-sm font-semibold hover:bg-panel/70">Download CV</a>
+                <a href="{{ asset('files/' . $profile->cv_file) }}" download class="rounded-full bg-panel px-7 py-3 text-sm font-semibold transition duration-300 hover:-translate-y-0.5 hover:bg-panel/70">Download CV</a>
             @endif
         </div>
     </div>
 
-    <div class="shrink-0">
+    <div class="animate-fade-in animate-delay-1 shrink-0">
         @if ($profile->foto)
             <img src="{{ asset('images/' . $profile->foto) }}" alt="Foto {{ $profile->nama }}" class="h-72 w-72 rounded-full border-4 border-accent object-cover md:h-96 md:w-96">
         @else

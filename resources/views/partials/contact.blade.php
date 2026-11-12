@@ -6,10 +6,10 @@
         <div class="mt-10 flex flex-wrap gap-4">
             @foreach ($profile->contacts as $contact)
                 <a href="{{ $contact->url }}" @unless (str_starts_with($contact->url, 'mailto:')) target="_blank" rel="noopener" @endunless
-                   class="rounded-full border border-accent/40 bg-panel/50 px-7 py-3 font-semibold hover:bg-accent">
+                   class="rounded-full border border-accent/40 bg-panel/50 px-7 py-3 font-semibold transition duration-300 hover:-translate-y-0.5 hover:bg-accent">
                     {{ $contact->label }}
                 </a>
             @endforeach
         </div>
     </div>
-</section>
+<section id="contact" class="reveal border-t border-panel">

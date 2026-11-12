@@ -18,4 +18,4 @@
             @endif
         </dl>
     </div>
-</section>
+<section id="about" class="reveal border-t border-panel">

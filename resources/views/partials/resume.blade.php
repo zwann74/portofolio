@@ -10,7 +10,7 @@
                         <div class="flex flex-col items-center pt-9">
                             <span class="h-5 w-5 shrink-0 rounded-full bg-accent"></span>
                             @unless ($loop->last)
-                                <span class="mt-2 w-0.5 flex-1 bg-accent/40"></span>
+                                <span class="timeline-line mt-2 w-0.5 flex-1 bg-accent/40"></span>
                             @endunless
                         </div>
                         <div class="flex-1 pb-6">
@@ -86,7 +86,7 @@
             <h2 class="text-4xl font-bold md:text-5xl">My <span class="text-accent">achievements</span></h2>
             <div class="mt-12 grid gap-6 md:grid-cols-3">
                 @forelse ($profile->achievements as $ach)
-                    <article class="flex flex-col gap-4 rounded-2xl bg-panel/50 p-8">
+                       <article class="flex flex-col gap-4 rounded-2xl bg-panel/50 p-8 transition duration-300 hover:-translate-y-2 hover:shadow-xl hover:shadow-accent/20">
                         <span class="flex h-14 w-14 items-center justify-center rounded-full bg-accent/15">
                             <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-accent">
                                 <path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6" />
@@ -113,4 +113,4 @@
         </div>
 
     </div>
-</section>
+<section id="resume" class="reveal border-t border-panel">
